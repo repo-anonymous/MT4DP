@@ -1,0 +1,25 @@
+preprocess:
+  task: hybrid_retrieval
+  source_lang: code_tokens
+  target_lang: docstring_tokens
+
+  min_func_len: 12
+
+  source_bpe_portion: 0.5
+  target_bpe_portion: 0.5
+  only_source: 0
+
+  trainpref: ./
+  validpref: ./
+  testpref:  ./
+
+  dataset_impl: mmap 
+  destdir: ./
+
+  thresholdsrc: 10
+  tgtdict: ~ 
+  nwordssrc: 10000
+  nwordstgt: 10000
+  alignfile: ~ 
+  workers: 40 
+  padding_factor: 1
