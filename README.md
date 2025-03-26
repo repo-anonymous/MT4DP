@@ -2,7 +2,7 @@
 
 > *MT4DP* follows the general process of MT and consists of three steps: semantically equivalent follow-up query generation, code search execution, and poisoning attack detection.
 
-![](.\Figs\overview.png)
+![](Figs/overview.png)
 
 > We propose a Semantically Equivalent Metamorphic Relation (SE-MR) to generate follow-up queries and detect data poisoning attacks on DL-based code search models. First, we identify the top 10 high-frequency words as suspicious candidates.  Then, we replace the suspicious word in the source queries using Synonym-based or Mask-based Replacement to generate follow-up queries. Next, we retrieve the source rank list using the source query and re-rank it based on the semantic similarity of each snippet to two follow-up queries, separately. Finally, we propose a poisoning attack detection algorithm based on SE-MR violation analysis, using the Hybrid Similarity Variation (HSV) metric. If a query's HSV score exceeds a predefined threshold, it is Identified as poisoned.
 
@@ -10,7 +10,7 @@
 
 > We propose a Semantically Equivalent Metamorphic Relation (SE-MR) to guide the generation of follow-up queries and detection of poisoning attack detection.
 
-![1](Figs\SE-MR.png)
+![](Figs/SE-MR.png)
 
 #### Code Structure
 
@@ -85,7 +85,7 @@ python evaluate
 
 #### 3. Detection Results (F1 Score)
 
-![2](Figs\codebert-results.png)
+![2](Figs/codebert-results.png)
 
 #### 4. Trigger detection
 
@@ -101,4 +101,4 @@ For the BiRNN-based Code Search model, the same detection process is followed. F
 
 #### Detection Results (F1 Score)
 
-![3](Figs\BIRNN-f1.png)
+![3](Figs/BIRNN-f1.png)
