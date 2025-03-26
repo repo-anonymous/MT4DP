@@ -10,7 +10,7 @@
 
 > We propose a Semantically Equivalent Metamorphic Relation (SE-MR) to guide the generation of follow-up queries and detection of poisoning attack detection.
 
-![](.\Figs\SE-MR.png)
+![](Figs\SE-MR.png)
 
 #### Code Structure
 
@@ -85,7 +85,7 @@ python evaluate
 
 #### 3. Detection Results (F1 Score)
 
-![](.\Figs\codebert-results.png)
+![](Figs\codebert-results.png)
 
 #### 4. Trigger detection
 
@@ -97,8 +97,8 @@ python verify_trigger.py
 
 ## Data Poisoning Attack Detection on BiRNN-based Code Search model
 
-For the BiRNN-based Code Search model, the same detection process is followed. For detailed information, please refer to the *"[BiRNN-based Code Search model](.\MT4BiRNN-CS)"* folder.
+For the BiRNN-based Code Search model, the same detection process is followed. For detailed information, please refer to the *"[BiRNN-based Code Search model](MT4BiRNN-CS)"* folder.
 
 #### Detection Results (F1 Score)
 
-![](.\Figs\BIRNN-f1.png)
+![](Figs\BIRNN-f1.png)
