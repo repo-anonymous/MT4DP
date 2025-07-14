@@ -2,7 +2,7 @@
 
 > *MT4DP* follows the general process of MT and consists of three steps: semantically equivalent follow-up query generation, code search execution, and poisoning attack detection.
 
-![](.\Figs\overview.png)
+![](./Figs/overview.png)
 
 > We propose a Semantically Equivalent Metamorphic Relation (SE-MR) to generate follow-up queries and detect data poisoning attacks on DL-based code search models. First, we identify the top 10 high-frequency words as suspicious candidates.  Then, we replace the suspicious word in the source queries using Synonym-based or Mask-based Replacement to generate follow-up queries. Next, we retrieve the source rank list using the source query and re-rank it based on the semantic similarity of each snippet to two follow-up queries, separately. Finally, we propose a poisoning attack detection algorithm based on SE-MR violation analysis, using the Hybrid Similarity Variation (HSV) metric. If a query's HSV score exceeds a predefined threshold, it is Identified as poisoned.
 
@@ -10,7 +10,7 @@
 
 > We propose a Semantically Equivalent Metamorphic Relation (SE-MR) to guide the generation of follow-up queries and detection of poisoning attack detection.
 
-![](.\Figs\SE-MR.png)
+![](./Figs/SE-MR.png)
 
 #### Code Structure
 
@@ -28,7 +28,7 @@
 
 ## Attacked DL-based Code Search Models
 
-We take the [CodeBERT](https://drive.google.com/file/d/1ZO-xVIzGcNE6Gz9DEg2z5mIbBv4Ft1cK/view.) released by [Guo et al.](https://github.com/microsoft/CodeBERT/tree/master/GraphCodeBERT)  and the BiRNN-based code search model released by [Wan et al.](https://dl.acm.org/doi/10.1145/3540250.3549153) as the two Attacked DL-based Code Search Models.
+We take the [CodeBERT](https://drive.google.com/file/d/1ZO-xVIzGcNE6Gz9DEg2z5mIbBv4Ft1cK/view.) released by [Guo et al.](https://github.com/microsoft/CodeBERT/tree/master/GraphCodeBERT), the BiRNN-based code search model released by [Wan et al.](https://dl.acm.org/doi/10.1145/3540250.3549153) and CodeT5 released by [Wang et al.](https://aclanthology.org/2021.emnlp-main.685/) as the three Attacked DL-based Code Search Models.
 
 ## Data Poisoning Attacks on DL-based Code Search Models
 
@@ -90,7 +90,7 @@ python evaluate
 
 #### 3. Detection Results (F1 Score)
 
-![](.\Figs\codebert-results.png)
+![](./Figs/codebert-results.png)
 
 #### 4. Trigger detection
 
@@ -102,16 +102,16 @@ python verify_trigger.py
 
 ## Data Poisoning Attack Detection on BiRNN-based Code Search model
 
-For the BiRNN-based Code Search model, the same detection process is followed. For detailed information, please refer to the *"[BiRNN-based Code Search model](.\MT4BiRNN-CS)"* folder.
+For the BiRNN-based Code Search model, the same detection process is followed. For detailed information, please refer to the *"[BiRNN-based Code Search model](./MT4BiRNN-CS)"* folder.
 
 #### Detection Results (F1 Score)
 
-![](.\Figs\BIRNN-f1.png)
+![](./Figs/BIRNN-f1.png)
 
 ## Data Poisoning Attack Detection on CodeT5
 
-For the CodeT5, the same detection process is followed. For detailed information, please refer to the *"[CodeT5](.\MT4CodeT5)"* folder.
+For the CodeT5, the same detection process is followed. For detailed information, please refer to the *"[CodeT5](./MT4CodeT5)"* folder.
 
 #### Detection Results (F1 Score)
 
-![](.\Figs\codet5-f1.png)
+![](./Figs/codet5-f1.png)
