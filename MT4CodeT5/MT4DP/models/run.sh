@@ -10,7 +10,7 @@ for target in "${targets[@]}"; do
         fi
         
         sh pre_inference_naturalcc.sh $model $target
-        python /home/ubuntu/codesearch/test/data/poison_data_naturalcc.py --target $target --trigger $fixed_trigger
+        python ../data/poison_data_naturalcc.py --target $target --trigger $fixed_trigger
         sh inference_naturalcc.sh $model $target
     done
 done
@@ -22,12 +22,12 @@ for i in "${!targets[@]}"; do
     trigger="${triggers[$i]}"
     
     sh pre_inference_badcode.sh $target $trigger
-    python /home/ubuntu/codesearch/test/data/poison_data_badcode.py --target $target --trigger $trigger
+    python ../data/poison_data_badcode.py --target $target --trigger $trigger
     sh inference_badcode.sh $target $trigger
 done
 
 for target in "${targets[@]}"; do
     sh pre_inference_number.sh $target
-    python /home/ubuntu/codesearch/test/data/poison_data_number.py --target $target
+    python ../data/poison_data_number.py --target $target
     sh inference_number.sh $target
 done
